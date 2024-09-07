@@ -17,7 +17,7 @@ window.addEventListener('load', function() {
     const savedText = localStorage.getItem('markdown-input');
     if (savedText) {
         document.getElementById('markdown-input').value = savedText;
-        updatePreview(); 
+        updatePreview();
     }
 });
 
@@ -35,3 +35,18 @@ function updatePreview() {
         hljs.highlightElement(block);
     });
 }
+
+document.getElementById('toggle-layout').addEventListener('click', function() {
+    const editor = document.querySelector('.editor');
+    const preview = document.querySelector('.preview');
+    
+    if (editor.style.order === '2') {
+        editor.style.order = '1';
+        preview.style.order = '2';
+        document.querySelector('button').textContent = 'Switch to Left Preview';
+    } else {
+        editor.style.order = '2';
+        preview.style.order = '1';
+        document.querySelector('button').textContent = 'Switch to Right Preview';
+    }
+});
