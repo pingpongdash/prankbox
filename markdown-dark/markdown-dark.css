@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #121212; /* ダーク背景 */
+    color: #e0e0e0; /* 明るい文字色 */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.editor, .preview {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+
+.editor {
+    background-color: #2d2d2d; /* ダークグレー背景 */
+}
+
+.preview {
+    background-color: #1e1e1e; /* さらにダークな背景 */
+    overflow-y: auto;
+    border-left: 1px solid #444; /* 明るい灰色のボーダー */
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    background-color: #2d2d2d; /* ダークなテキストエリア背景 */
+    color: #e0e0e0; /* 明るい文字色 */
+    box-sizing: border-box;
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    background-color: #333; /* ダークなボタン背景 */
+    color: #e0e0e0; /* 明るい文字色 */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555; /* ホバー時に少し明るくなる */
+}
+
